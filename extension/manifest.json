@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Track_Content Extension",
+    "version": "0.1",
+    "permissions": ["tabs", "storage"],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+    "default_popup": "popup.html"
+    }
+}
